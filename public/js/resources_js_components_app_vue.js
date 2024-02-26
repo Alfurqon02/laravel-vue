@@ -37,7 +37,7 @@ __webpack_require__.r(__webpack_exports__);
     getAuthUser: function getAuthUser() {
       var _this = this;
 
-      axios.get('/api/get-authenticated-user').then(function (_ref) {
+      axios.get('/get-authenticated-user').then(function (_ref) {
         var data = _ref.data;
         //   console.log(data)
         _this.user = data.data;
@@ -147,9 +147,9 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _vm._v(
-              "\n                   Auth User name : " +
-                _vm._s(_vm.user.name) +
-                "\n                "
+              "\n                   Auth Username : " +
+                _vm._s(_vm.user.username) +
+                "\n                  "
             )
           ])
         ])

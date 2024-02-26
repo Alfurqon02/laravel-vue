@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,11 @@ Route::get('/home/{any?}', [
         return view('home');
     }
 ])->where('any', '.*');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('get-authenticated-user', [UserController::class,'authUser']);
+});
+
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('get-authenticated-user', [UserController::class,'authUser']);
+// });

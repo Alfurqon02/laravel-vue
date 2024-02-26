@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 /*
@@ -19,9 +20,13 @@ use App\Http\Controllers\UserController;
 // });
 
 // Route::get('/api/get-authenticated-user', 'UserController@show');
-
+// Auth::routes();
 // Route::group(['middleware' => 'auth:api'], function () {
-    Route::get('get-authenticated-user', [UserController::class,'authUser']);
+//     Route::get('get-authenticated-user', [UserController::class,'authUser']);
+// });
+
+// Route::get('/test', function() {
+//     return Auth::user();
 // });
 
 

@@ -100,7 +100,7 @@ class UserController extends Controller
         //     'description' => 'Successfully fetched auth user details.'
         // ]);
 
-        // dd($getData);
+        // dd($user);
 
         return response()->json([
             'success' => true,
